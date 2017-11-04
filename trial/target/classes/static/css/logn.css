@@ -1,0 +1,44 @@
+/* CSS used here will be applied after bootstrap.css */
+
+body { 
+ background: url('1a.jpg') no-repeat center center fixed; 
+
+
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+/* navbar */
+.navbar-default {
+    background-color: #F8F8F8;
+    border-color: #2c3742;
+    
+}
+/* Title */
+.navbar-default .navbar-brand {
+    color: dodgerblue;
+    font-family: monospace;
+    
+    
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-na#777open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: blue;
+    background-color: black;
+}
+
+
+.panel-default {
+    font-family:cursive;
+ opacity: 0.9;
+ margin-top:30px;
+  
+}
+.form-group.last {
+ margin-bottom:0px;
+   
+}

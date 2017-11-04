@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" style="background-color: lightgoldenrodyellow" >MTest-Taketest</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/index1">Home</a></li>
+    <!--  <li class="active" ><a href="#">Rules</a></li>-->
+      
+    </ul>
+  
+  </div>
+</nav>
+
+
+<form>
+<input type="button" value="Take test" onClick="quizCount()">
+<input type="button" value="Time remaining" id="timer">
+
+</form>
+<script>
+var s=00
+var m=30
+var q
+function quizCount()
+{
+document.getElementById('timer').value=m+":"+s+" remaining"
+s=s-1
+q=setTimeout("quizCount()", 1000)
+if (s<1)
+{ m=m-1; s=59;}
+
+if (m<0)
+{
+quizStop();
+}
+}
+function quizStop()
+{
+clearTimeout(q)
+document.getElementById('timer').value="Your Time Was Finished"
+}
+</script>
+    <br>
+  <h3>question 1</h3>
+    <P>1.How to stop the services in android?<BR>
+<input type="radio" >Finish()<BR>
+<input type="radio" >exit()<BR>
+<input type="radio" >manually<BR>
+<input type="radio" >stopService() and stopSelf<BR>
+        
+        <P>2.Parent class of Activity?<BR>
+<input type="radio" >Object<BR>
+<input type="radio" >Context<BR>
+<input type="radio" >Activity Group<BR>
+<input type="radio" >Context Theme Wrapper<BR>
+            
+      <P>3.What are the indirect Direct subclasses of Activity?<BR>
+ <input type="radio">LauncherActivity<BR>
+ <input type="radio">PreferenceActivity<BR>
+ <input type="radio">TabActivity<BR>
+ <input type="radio">All the above<BR>
+          
+     <P>4.What are the indirect Direct subclasses of Services?<BR>
+ <input type="radio">RecognitionService<BR>
+ <input type="radio">RemoteViewsService <BR>
+ <input type="radio">SpellCheckerService<BR>
+ <input type="radio">InputMethodService<BR>
+                 
+    <P>5.Which component is not activated by an Intent?<BR>
+ <input type="radio">Activity<BR>
+ <input type="radio">Services<BR>
+ <input type="radio">ContentProvider<BR>
+ <input type="radio">BroadcastReceiver<BR>
+                 
+<footer>
+<input type="button"  onclick="location.href='/result'" value="finish" >
+
+
+    </footer>
